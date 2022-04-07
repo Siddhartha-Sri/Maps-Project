@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.css" />
+
+    <title>TA MAPS</title>
+    <link rel="stylesheet" href="./styles/map.css" />
+</head>
+
+<body>
+    <!-- Header Starts Here -->
+    <header>
+        <div>
+            <img src="images/shortLogo.png" title="Company logo" alt="company logo" />
+            <span class="Heading">MAPS</span>
+            <span class="contact-us"><a href="#" aria-label="contact us">Contact Us</a></span>
+        </div>
+    </header>
+    <!-- Header Ends Here -->
+
+    <!-- Main Starts Here -->
+    <main>
+        <div id="map">
+
+            <!-- large screen html -->
+            <ul class="lg-screen-model" id="filter-pannel">
+                <li>
+                    <label>Area Near You(in kms)</label>
+                    <input class="lg-radius" id="map-radius" aria-labelledby="area radius around you" type="number" value="1" min="1" />
+                </li>
+                <li>
+                    <label>Select Category</label>
+                    <select id="map-category" aria-labelledby="choose category" >
+                        <option value="restaurants">Restaurants</option>
+                        <option value="shops">Shops</option>
+                        <option value="hospitals">Hospitals</option>
+                        <option value="pharmacies">Pharmacies</option>
+                    </select>
+                </li>
+                <li >
+                    <button id="input-search-btn" aria-labelledby="search" >SEARCH</button>
+                    <button id="input-reset-btn" aria-labelledby="reset" >RESET</button>
+                </li>
+            </ul>
+            <div id="end-route" ></div><!-- end route button parent -->
+            <!-- large screen html ends here -->
+            
+            <!-- small screen html -->
+            <img src="./images/filter-icon.png" id="filter-button" alt="choose radius and category" />
+            <ul class="sm-screen-inputs" id="sm-filter-pannel">
+                <li>
+                    <label>Area</label>
+                    <input class="sm-radius" id="sm-map-radius" type="number" aria-labelledby="area radius around you" value="1" min="1" />
+                </li>
+                <li>
+                    <label>Category</label>
+                    <select class="sm-category" id="sm-map-category" aria-labelledby="choose category" >
+                        <option value="restaurants">Restaurants</option>
+                        <option value="shops">Shops</option>
+                        <option value="hospitals">Hospitals</option>
+                        <option value="pharmacies">Pharmacies</option>
+                    </select>
+                </li>
+                <li >
+                    <button class="sm-search-btn" id="input-search-btn" aria-labelledby="search" >Go</button>
+                    <button class="sm-reset-btn" id="input-reset-btn" aria-labelledby="reset" >Clear</button>
+                </li>
+            </ul> 
+            <!-- small screen html ends here -->
+
+        </div>
+    </main>
+    <!-- Main Ends Here -->
+
+    <!-- Scripts start here -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/setup.js"></script>
+    <script type="module" src="scripts/map.js"></script>
+</body>
+
+</html>

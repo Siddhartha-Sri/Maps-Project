@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 0em;
+}
+
+header {
+    background-color: #222d41;
+    color: white;
+    padding-top: 1.5em;
+    width: 100%;
+}
+
+.Heading {
+    font-size: 2rem;
+}
+
+header div {
+    width: 95%;
+    margin: auto;
+    box-shadow: 0 4px 6px -6px #88888846;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-us {
+    margin-top: 0.3em;
+    font-size: 1.5rem;
+    float: right;
+}
+
+#end-route {
+    position: absolute;
+    z-index: 999;
+    bottom: 15%;
+    left: 2%;
+}
+
+.lg-screen-model {
+    position: absolute;
+    z-index: 999;
+    right: 2%;
+    top: 2%;
+    width:20%;
+    text-align: center;
+    border-radius: 2em;
+    background-color: rgb(252, 248, 244);
+    color:#b3312d;
+}
+
+.lg-screen-model li {
+    list-style: none;
+    padding: 0.5em;
+    font-size:0.9rem;
+}
+
+.lg-screen-model li button {
+    border: solid rgb(92, 91, 91) 0.01em;
+    border-radius: 0.5em;
+    padding:0.5em;
+    width:80%;
+    font-size: 0.7rem;
+}
+
+#input-search-btn {
+    background-color: #5bc0de;
+    margin-bottom:0.2em;
+}
+
+#input-reset-btn {
+    background-color: #d9534f;
+}
+
+.lg-radius {
+    width: 20%;
+}
+
+#filter-button {
+    position: absolute;
+    z-index: 999;
+    bottom: 15%;
+    right: 5%;
+    height: 2em;
+    padding: 0.5em;
+    border: 1px solid rgb(219, 216, 216);
+    border-radius: 5em;
+    background-color: rgb(252, 248, 244);
+}
+
+#filter-button {
+    display: none;
+}
+
+.sm-screen-inputs {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .lg-screen-model {
+        display: none;
+    }
+    #filter-button {
+        display: block;
+    }
+    .sm-screen-inputs {
+        position: absolute;
+        z-index: 999;
+        bottom: 15%;
+        left: 25%;
+        width: 50%;
+        text-align: center;
+        border-radius: 1em;
+        background-color: rgb(252, 248, 244);
+        display: none;
+        color:#b3312d;
+    }
+    .sm-screen-inputs li {
+        list-style: none;
+        padding: 0.5em;
+        width:90%;
+    }
+    .sm-radius {
+        width: 10%;
+    }
+    .sm-category {
+        width: 60%;
+    }
+    .sm-screen-inputs li button {
+        border: rgb(92, 91, 91) 0.01em;
+        border-radius: 1em;
+        padding: 0.2em;
+    }
+    #input-search-btn {
+        background-color: #5bc0de;
+        width:30%;
+    }
+    #input-reset-btn {
+        background-color: #d9534f;
+        width:30%;
+    }
+    #end-route,
+    #filter-button {
+        bottom: 11%;
+    }
+}
